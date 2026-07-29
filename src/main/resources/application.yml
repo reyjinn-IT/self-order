@@ -1,0 +1,51 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: table-order-mvp
+
+  datasource:
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:tableorder_db}?useSSL=false&serverTimezone=Asia/Jakarta&allowPublicKeyRetrieval=true
+    username: ${DB_USERNAME:tableorder_user}
+    password: ${DB_PASSWORD:changeme}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      # skema dikelola sepenuhnya oleh Flyway, JPA hanya validasi
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: Asia/Jakarta
+    show-sql: false
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    locations: classpath:db/migration
+
+  jackson:
+    time-zone: Asia/Jakarta
+    default-property-inclusion: non_null
+    property-naming-strategy: SNAKE_CASE
+
+# Konfigurasi khusus aplikasi
+app:
+  order:
+    id-prefix: "ORD"
+    pending-payment-expiry-minutes: 15
+
+midtrans:
+  base-url: ${MIDTRANS_BASE_URL:https://app.sandbox.midtrans.com}
+  api-base-url: ${MIDTRANS_API_BASE_URL:https://api.sandbox.midtrans.com}
+  server-key: ${MIDTRANS_SERVER_KEY:REPLACE_WITH_SERVER_KEY}
+  client-key: ${MIDTRANS_CLIENT_KEY:REPLACE_WITH_CLIENT_KEY}
+
+logging:
+  level:
+    com.tableorder: INFO
+    org.hibernate.SQL: WARN
