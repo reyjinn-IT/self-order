@@ -10,16 +10,6 @@ Sistem pemesanan makanan dari meja yang memungkinkan pelanggan memesan langsung 
 - Sinkronisasi order real-time ke sistem kasir
 - Manajemen menu dasar
 
-## Dokumentasi
-
-| Dokumen | Deskripsi |
-|---|---|
-| [`BRD_MVP_Sistem_Pemesanan_Meja.md`](./BRD_MVP_Sistem_Pemesanan_Meja.md) | Business requirements untuk scope MVP |
-| [`PRD_MVP_Sistem_Pemesanan_Meja.md`](./PRD_MVP_Sistem_Pemesanan_Meja.md) | Product requirements & arsitektur MVP |
-| [`API_Contract_MVP.md`](./API_Contract_MVP.md) | Contoh request/response semua endpoint MVP |
-| [`BRD_Sistem_Pemesanan_Meja.md`](./BRD_Sistem_Pemesanan_Meja.md) | Business requirements scope penuh (roadmap jangka panjang) |
-| [`PRD_Sistem_Pemesanan_Meja.md`](./PRD_Sistem_Pemesanan_Meja.md) | Product requirements scope penuh, termasuk integrasi POS eksternal |
-
 ## Branching Strategy
 
 Repo ini pakai dua jenis branch dengan tujuan berbeda:
@@ -47,8 +37,6 @@ main
  └── development/companion-screen (kerja fitur companion screen)
        └── selesai → PR ke main → review → merge → rilis
 ```
-
-Setup ruleset GitHub-nya ada di [`ruleset-main.json`](./ruleset-main.json) dan [`ruleset-development.json`](./ruleset-development.json) — tinggal import lewat `Settings → Rules → Rulesets → Import a ruleset`.
 
 ## Payment Gateway
 
