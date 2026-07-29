@@ -17,7 +17,6 @@ Repo ini pakai dua jenis branch dengan tujuan berbeda:
 ### `main`
 - Branch **production** — kode yang ada di sini adalah kode yang sudah rilis/live.
 - Tidak boleh di-push langsung. Semua perubahan wajib masuk lewat **Pull Request** dari branch development, minimal 1 approval, dan status checks harus lolos.
-- Dilindungi lewat GitHub Ruleset (`ruleset-main.json`) — block force push, block delete, require PR.
 
 ### `development/<nama-fitur>`
 - Branch tempat kerja aktif untuk tiap fitur/perbaikan, dibuat dari `main`.
@@ -26,7 +25,6 @@ Repo ini pakai dua jenis branch dengan tujuan berbeda:
   - `development/companion-screen`
   - `development/midtrans-webhook`
   - `development/menu-management`
-- Bebas push langsung selama masih dalam tahap pengembangan (dilindungi minimal dari force-push & delete lewat `ruleset-development.json`).
 - Setelah fitur selesai & teruji, buka Pull Request dari `development/<nama-fitur>` ke `main` untuk direview sebelum di-merge.
 
 ### Alur singkat
