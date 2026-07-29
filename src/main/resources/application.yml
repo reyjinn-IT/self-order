@@ -6,9 +6,9 @@ spring:
     name: table-order-mvp
 
   datasource:
-    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:tableorder_db}?useSSL=false&serverTimezone=Asia/Jakarta&allowPublicKeyRetrieval=true
-    username: ${DB_USERNAME:tableorder_user}
-    password: ${DB_PASSWORD:changeme}
+    url: jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}?useSSL=false&serverTimezone=Asia/Jakarta&allowPublicKeyRetrieval=true
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
