@@ -1,2 +1,2 @@
 # self-order
-Sistem pemesanan makanan dari meja (self-order via QR code) dengan pembayaran QRIS/e-wallet lewat Midtrans atau bayar di kasir, terintegrasi ke sistem kasir.
+Sistem pemesanan makanan dari meja yang memungkinkan pelanggan memesan langsung lewat scan QR code di meja tanpa bantuan pelayan. Mendukung dua metode pembayaran — QRIS/e-wallet via Midtrans atau bayar langsung di kasir — dengan setiap order yang tersinkronisasi real-time ke sistem kasir untuk diproses. Dibangun bertahap dimulai dari MVP (Companion Screen kasir) menuju integrasi POS penuh.
