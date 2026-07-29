@@ -36,3 +36,6 @@ build/
 ### Env ###
 .env
 *.env.local
+
+./ruleset-development.json
+./ruleset-main.json
