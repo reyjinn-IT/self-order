@@ -7,9 +7,9 @@ services:
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: tableorder_db
-      MYSQL_USER: tableorder_user
-      MYSQL_PASSWORD: changeme
+      MYSQL_DATABASE: self-order
+      MYSQL_USER: admin-order
+      MYSQL_PASSWORD: 123
     ports:
       - "3306:3306"
     volumes:

@@ -37,8 +37,8 @@ build/
 .env
 *.env.local
 
-./ruleset-development.json
-./ruleset-main.json
-./API_Contract_MVP.md
-./BRD_MVP_Sistem_Pemesanan_Meja.md
-./PRD_MVP_Sistem_Pemesanan_Meja
+ruleset-development.json
+ruleset-main.json
+API_Contract_MVP.md
+BRD_MVP_Sistem_Pemesanan_Meja.md
+PRD_MVP_Sistem_Pemesanan_Meja.md
