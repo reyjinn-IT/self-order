@@ -55,8 +55,7 @@ public class AdminMenuController {
     }
 
     @PatchMapping("/menu-items/{itemId}/availability")
-    public ResponseEntity<MenuItem> setAvailability(@PathVariable Long itemId,
-                                                      @RequestBody Map<String, Boolean> body) {
+    public ResponseEntity<MenuItem> setAvailability(@PathVariable Long itemId, @RequestBody Map<String, Boolean> body) {
         boolean available = Boolean.TRUE.equals(body.get("status_tersedia"));
         return ResponseEntity.ok(menuService.setItemAvailability(itemId, available));
     }

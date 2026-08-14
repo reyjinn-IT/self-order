@@ -48,7 +48,7 @@ public class MenuServiceImpl implements MenuService {
     @Override
     @Transactional(readOnly = true)
     public List<MenuItem> listAllItemsForAdmin() {
-        return itemRepository.findAll();
+        return itemRepository.findAllWithCategory();
     }
 
     @Override
